@@ -1,0 +1,77 @@
+.main__faqs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 150px;
+  position: relative;
+  overflow: hidden;
+
+  .faqs-header {
+    position: inherit;
+    z-index: 4;
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    margin-bottom: 64px;
+
+    span {
+      @include bar;
+    }
+
+    h2 {
+      font-family: $gilroy-bold;
+      font-size: 2.5rem;
+    }
+  }
+
+  .faqs-group {
+    position: inherit;
+    z-index: 4;
+    max-width: 792px;
+    font-family: $gilroy-medium;
+
+    .faq {
+      border-bottom: 1px solid #D6D6D6;
+      margin-top: 32px;
+
+      &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 16px;
+
+        h3 {
+          font-size: 1.25rem;
+          text-wrap: initial;
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+        }
+      }
+
+      &__summary {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .faqs-left {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  .faqs-right {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+  }
+}

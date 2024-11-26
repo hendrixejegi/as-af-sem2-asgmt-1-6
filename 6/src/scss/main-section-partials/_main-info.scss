@@ -1,0 +1,85 @@
+.main__info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  &-stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 0;
+    background-color: #f9fbfd;
+
+    h2 {
+      @include header-2;
+      max-width: 337px;
+    }
+
+    .stats-group {
+      display: flex;
+      max-width: 709px;
+      gap: 72px;
+
+      .stat__number {
+        font-family: $gilroy-semi-bold;
+        font-size: 2rem;
+      }
+
+      .stat__info {
+        font-family: $gilroy-medium;
+      }
+    }
+  }
+
+  &-features {
+    display: flex;
+    gap: 96px;
+    padding: 130px 0;
+
+    .features-summary {
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        display: flex;
+        height: fit-content;
+        align-items: center;
+
+        & > span {
+          @include bar;
+        }
+
+        h2 {
+          @include header-2;
+        }
+      }
+
+      p {
+        font-family: $gilroy-medium;
+        max-width: 370px;
+        align-self: flex-end;
+      }
+    }
+
+    .features-group {
+      display: grid;
+      grid-template-columns: repeat(2, 340px);
+      column-gap: 28px;
+      row-gap: 64px;
+
+      .feature img {
+        margin-bottom: 40px;
+      }
+
+      .feature h3 {
+        font-family: $gilroy-semi-bold;
+        font-size: 2rem;
+        margin-bottom: 16px;
+      }
+
+      .feature p {
+        font-family: $gilroy-medium;
+      }
+    }
+  }
+}

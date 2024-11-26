@@ -1,0 +1,3 @@
+@function set-font-family($weight) {
+  @return "Gilroy-#{$weight}";
+}

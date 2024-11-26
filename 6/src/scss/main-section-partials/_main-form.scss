@@ -1,0 +1,66 @@
+.main__form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: $bg-hero;
+  padding: 84px 0;
+  overflow: hidden;
+
+  .form {
+    position: inherit;
+    z-index: 4;
+    max-width: 476px;
+    padding: 42px;
+    font-family: $gilroy-medium;
+    border-radius: 12px;
+    color: #3284ff;
+    background-color: #fff;
+
+    form {
+      input,
+      select,
+      button {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #3284ff;
+        border-radius: 12px;
+        margin-bottom: 24px;
+      }
+
+      select,
+      input::placeholder {
+        color: #3284ff;
+      }
+
+      .input-group {
+        display: grid;
+        grid-template-columns: 0.6fr 0.4fr;
+        gap: 12px;
+      }
+
+      button {
+        cursor: pointer;
+        background-color: $primary-color;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        font-family: $gilroy-semi-bold;
+
+        img {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,122 @@
+.main__pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px 0 112px;
+
+  .pricing-summary {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 68px;
+
+    &__header {
+      display: flex;
+      height: fit-content;
+      align-items: center;
+
+      & > span {
+        @include bar;
+      }
+
+      h2 {
+        @include header-2;
+      }
+    }
+
+    p {
+      font-family: $gilroy-medium;
+      max-width: 560px;
+      text-align: center;
+      align-self: flex-end;
+    }
+  }
+
+  .plans-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 68px;
+
+    [class|="plan"] {
+      position: inherit;
+
+      p:first-of-type {
+        font-family: $gilroy-medium;
+        font-size: 1.5rem;
+        margin-bottom: 34px;
+      }
+
+      h3 {
+        font-family: $gilroy-bold;
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+      }
+
+      p:last-of-type {
+        font-family: $gilroy-medium;
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+      }
+
+      ul {
+        padding: 0;
+        font-family: $gilroy-medium;
+        
+        li {
+          list-style-type: none;
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .plan-basic,
+    .plan-teams {
+      z-index: 1;
+      padding: 20px 60px;
+      border: 0.4px solid $primary-color;
+      border-radius: 12px;
+
+      li {
+        background-image: url(../assets/images/check-circle-blue.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 24px;
+      }
+    }
+
+    .plan-basic {
+      margin-right: -30px;
+    }
+    .plan-teams {
+      margin-left: -30px;
+    }
+
+    .plan-professional {
+      z-index: 4;
+      padding: 90px 90px 90px 60px ;
+      background: $bg-hero;
+      color: #fff;
+      border-radius: 12px;
+
+      li {
+        background-image: url(../assets/images/check-circle-white.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 24px;
+      }
+    }
+  }
+
+  .pricing-btns a:first-child {
+    @include btn-primary;
+    color: $primary-color;
+    background-color: #fff;
+    border: 0.4px solid $primary-color;
+    margin-right: 12px;
+    width: 200px;
+  }
+  .pricing-btns a:last-child {
+    @include btn-primary;
+    width: 200px;
+  }
+}

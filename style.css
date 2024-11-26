@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --MILK: #fffdf5;
+  --BONE: #e2dbd0;
+  --MAX-GREEN: #628b35;
+  --PHTHALO-GREEN: #103713;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-family: "Nunito", serif;
+}
+
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  border-radius: 5px;
+  background-color: var(--MILK);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  justify-content: center;
+  color: var(--PHTHALO-GREEN);
+}
+
+.header img {
+  height: auto;
+  max-width: 60px;
+  margin-right: 16px;
+  object-fit: contain;
+}
+
+.student-info h1 {
+  line-height: 2.25rem;
+}
+
+.student-info p {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.assignment-group {
+  gap: 16px;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.assignment {
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--MAX-GREEN);
+  background-color: var(--BONE);
+}
+
+.assignment:hover {
+  transform: scale(1.1, 1.1);
+  transition: transform 1s;
+}
+
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    padding: 8px;
+  }
+
+  .assignment-group {
+    grid-template-columns: 100%;
+  }
+}

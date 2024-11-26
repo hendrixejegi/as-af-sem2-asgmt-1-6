@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px auto 0;
+  width: 80%;
+  height: 44px;
+
+  &__nav {
+    &-links {
+      display: flex;
+      gap: 40px;
+    }
+
+    &-link {
+      cursor: pointer;
+      list-style-type: none;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-family: $gilroy-medium;
+      }
+
+      .primary {
+        @include primary;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: $gilroy-semi-bold;
+
+    &.primary {
+      @include primary;
+      margin-right: 24px;
+    }
+
+    &.btn-primary {
+      @include btn-primary;
+    }
+  }
+}
